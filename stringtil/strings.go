@@ -2,12 +2,10 @@ package stringtil
 
 import (
 	"strings"
+//	"fmt"
 )
 
-// @method Reverse
-// @description Reverses a string
-// @param str string
-// @return string Returns the reversed string
+// Reverses a string
 func Reverse(str string) (string) {
 	var _str string
 	for i := len(str)-1; i > -1 ; i-- {
@@ -16,10 +14,7 @@ func Reverse(str string) (string) {
 	return _str
 }
 
-// @method Repeat
-// @description Repeats string n times
-// @param str string String to be repeated
-// @param count int No of times the string should be repeated
+// Repeats string n times
 func Repeat(str string, count int) string {
 	var _str string = str
 	if count > 1 {
@@ -30,19 +25,13 @@ func Repeat(str string, count int) string {
 	return _str
 }
 
-// @method Ucfirst
-// @description Replaced the first letter of the string to uppercase
-// @param str string String to be repeated
-// @return string Returns the Converted string
+// Replaced the first letter of the string to uppercase
 func Ucfirst(str string) (string) {
 	var _s string = strings.ToUpper(str[0:1]) + str[1:]
 	return _s
 }
 
-// @method Ucwords
-// @description Replaces the first letter of each word to Uppercase
-// @param str string String to be repeated
-// @return string Returns the Converted string
+// Replaces the first letter of each word to Uppercase
 func Ucwords(str string) (string) {
 	var _str string
 	var strArr []string
@@ -54,12 +43,7 @@ func Ucwords(str string) (string) {
 	return _str
 }
 
-// @method Substr
-// @description Returns substring of string
-// @param str string haystack
-// @param startIndex int Start Index
-// @param length int Length
-// @return string Returns the substring
+// Returns substring of string
 func Substr(str string, startIndex int, length ...int) (string) {
 	var _strLen int = len(str)
 	if len(length) == 0 {
@@ -72,10 +56,7 @@ func Substr(str string, startIndex int, length ...int) (string) {
 	}
 }
 
-// @method ParseUrl
-// @description Splits the query params and returns in Map format
-// @param str string query string
-// @return map Returns the field map
+// Splits the query params and returns in Map format
 func ParseUrl(queryString string) map[string]string {
 	var paramArray []string = strings.Split(queryString, "&")
 	var paramArrayLen int = len(paramArray)
@@ -88,4 +69,18 @@ func ParseUrl(queryString string) map[string]string {
 	return op
 }
 
-func 
+// Finds the position of needle in haystack
+func Strpos(haystack string, needle string) int {
+	return strings.Index(haystack, needle)
+}
+
+// Translates certain characters in a string
+func Strtr(str string, fromStr string, toStr string) string {
+	var lenToStr int = len(toStr)
+	for i, _ := range fromStr {
+		if i < lenToStr {
+			str = strings.ReplaceAll(str, string(fromStr[i]), string(toStr[i]))
+		}
+	}
+	return str
+}

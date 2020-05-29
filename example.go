@@ -21,5 +21,7 @@ func main() {
 	fmt.Println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==")
 	fmt.Println("ParseUrl", stringtil.ParseUrl("hello=world&world=hello"))
 	fmt.Println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==")
+	fmt.Println("Strtr", stringtil.Strtr("Hilla Warld","ia","eo"))
+	fmt.Println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==")
 
 }

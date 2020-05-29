@@ -19,3 +19,15 @@ Ucfirst - Converts the first letter of the string to uppercase
 Ucwords - Converts the first letter of each word to uppercase
 
 `stringtil.Ucwords(str string)`
+
+Substr - Returns substring of string
+
+`stringtil.Substr(str string, startIndex int, length ...int)`
+
+ParseUrl - Splits the query params and returns in Map format
+
+`stringtil.ParseUrl(queryString string)`
+
+Strtr - Translates certain characters in a string
+
+`stringtil.Strtr(str string, fromStr string, toStr string)`
